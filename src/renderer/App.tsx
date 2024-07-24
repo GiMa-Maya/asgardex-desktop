@@ -20,6 +20,7 @@ import { MayachainProvider } from './contexts/MayachainContext'
 import { MayachainQueryProvider } from './contexts/MayachainQueryContext'
 import { MidgardProvider } from './contexts/MidgardContext'
 import { MayaMidgardProvider } from './contexts/MidgardMayaContext'
+import { RadixProvider } from '/contexts/RadixContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { ThorchainProvider } from './contexts/ThorchainContext'
 import { ThorchainQueryProvider } from './contexts/ThorchainQueryContext'
@@ -49,15 +50,17 @@ export const App: React.FC = (): JSX.Element => {
                                       <MayachainProvider>
                                         <MayachainQueryProvider>
                                           <MayaMidgardProvider>
-                                            <UserNodesProvider>
-                                              <I18nProvider>
-                                                <Router>
-                                                  <ThemeProvider>
-                                                    <AppView />
-                                                  </ThemeProvider>
-                                                </Router>
-                                              </I18nProvider>
-                                            </UserNodesProvider>
+                                            <RadixProvider>
+                                              <UserNodesProvider>
+                                                <I18nProvider>
+                                                  <Router>
+                                                    <ThemeProvider>
+                                                      <AppView />
+                                                    </ThemeProvider>
+                                                  </Router>
+                                                </I18nProvider>
+                                              </UserNodesProvider>
+                                            </RadixProvider>
                                           </MayaMidgardProvider>
                                         </MayachainQueryProvider>
                                       </MayachainProvider>
