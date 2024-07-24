@@ -15,6 +15,7 @@ import { ETHChain } from '@xchainjs/xchain-ethereum'
 import { KUJIChain } from '@xchainjs/xchain-kujira'
 import { LTCChain } from '@xchainjs/xchain-litecoin'
 import { MAYAChain } from '@xchainjs/xchain-mayachain'
+import { RadixChain } from '@xchainjs/xchain-radix'
 import { THORChain } from '@xchainjs/xchain-thorchain'
 import { Asset, Address, Chain } from '@xchainjs/xchain-util'
 import { List, Collapse, RadioChangeEvent } from 'antd'
@@ -182,7 +183,8 @@ export const WalletSettings: React.FC<Props> = (props): JSX.Element => {
     [MAYAChain]: 0,
     [DASHChain]: 0,
     [KUJIChain]: 0,
-    [ARBChain]: 0
+    [ARBChain]: 0,
+    [RadixChain]: 0
   })
   const [walletAccountMap, setWalletAccountMap] = useState<Record<EnabledChain, number>>({
     [BTCChain]: 0,
@@ -197,7 +199,8 @@ export const WalletSettings: React.FC<Props> = (props): JSX.Element => {
     [MAYAChain]: 0,
     [DASHChain]: 0,
     [KUJIChain]: 0,
-    [ARBChain]: 0
+    [ARBChain]: 0,
+    [RadixChain]: 0
   })
 
   const {
